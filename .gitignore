@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# SQLite databases (runtime)
+*.db
+*.db-wal
+*.db-shm
+
+# Environment
+.env
+
+# Build tarballs
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Claude Code project config
+.claude/

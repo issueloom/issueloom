@@ -1,0 +1,46 @@
+{
+  "name": "issueloom",
+  "version": "0.2.0",
+  "description": "IssueLoom — Lightweight issue tracking system for AI agent teams",
+  "type": "module",
+  "bin": {
+    "issueloom": "./bin/cli.js"
+  },
+  "main": "src/mcp/server.js",
+  "files": [
+    "bin/",
+    "src/db/",
+    "src/mcp/",
+    "src/viewer/server.js",
+    "src/viewer/middleware.js",
+    "src/viewer/routes/",
+    "src/viewer/dist/"
+  ],
+  "scripts": {
+    "start": "node src/mcp/server.js",
+    "test": "node --test tests/integration.test.js",
+    "build:viewer": "cd src/viewer/client && npm install && npm run build",
+    "prepublishOnly": "npm run build:viewer"
+  },
+  "keywords": [
+    "mcp",
+    "issue-tracker",
+    "issueloom",
+    "claude-code",
+    "agent"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/issueloom/issueloom.git"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.26.0",
+    "better-sqlite3": "^12.6.2",
+    "express": "^5.2.1",
+    "zod": "^4.3.6"
+  }
+}

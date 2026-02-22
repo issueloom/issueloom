@@ -1,0 +1,7 @@
+src/viewer/client/
+tests/
+.claude/
+*.db
+*.db-wal
+*.db-shm
+dist/

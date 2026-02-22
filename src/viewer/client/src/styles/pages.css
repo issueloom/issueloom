@@ -1,0 +1,178 @@
+/* Dashboard */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.dashboard-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dashboard-sections {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Issue detail */
+.issue-header {
+  margin-bottom: 24px;
+}
+
+.issue-header__number {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-bottom: 4px;
+}
+
+.issue-header__title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.issue-meta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 13px;
+}
+
+.issue-meta__item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.issue-meta__label {
+  color: var(--color-text-muted);
+}
+
+.issue-body {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.issue-body__content {
+  font-size: 14px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.issue-sidebar {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 24px;
+  align-items: start;
+}
+
+.issue-sidebar__main {
+  min-width: 0;
+}
+
+.issue-sidebar__side {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (max-width: 800px) {
+  .issue-sidebar {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Section heading */
+.section-heading {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+/* Page heading */
+.page-heading {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* Issue count */
+.issue-count {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-bottom: 12px;
+}
+
+/* System distribution table */
+.system-table {
+  width: 100%;
+  font-size: 12px;
+}
+
+.system-table th,
+.system-table td {
+  padding: 4px 8px;
+  text-align: center;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.system-table th {
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.system-table td:first-child,
+.system-table th:first-child {
+  text-align: left;
+}
+
+.system-table__name {
+  font-family: "SFMono-Regular", Consolas, monospace;
+}
+
+/* Editable fields */
+.editable-title__display {
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  padding: 2px 4px;
+  margin: -2px -4px;
+}
+
+.editable-title__display:hover {
+  background: var(--color-bg-tertiary);
+}
+
+.editable-title__input {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  background: var(--color-surface);
+  border: 2px solid var(--color-focus);
+  border-radius: var(--radius-sm);
+  padding: 2px 4px;
+  color: var(--color-text);
+}
+
+.editable-body {
+  cursor: pointer;
+}
+
+.editable-body:hover {
+  border-color: var(--color-text-muted);
+}
