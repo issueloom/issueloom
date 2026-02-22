@@ -27,15 +27,23 @@
     "issue-tracker",
     "issueloom",
     "claude-code",
-    "agent"
+    "agent",
+    "ai-agent",
+    "model-context-protocol",
+    "sqlite",
+    "project-management"
   ],
   "license": "MIT",
   "engines": {
     "node": ">=20.0.0"
   },
+  "homepage": "https://github.com/issueloom/issueloom#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/issueloom/issueloom.git"
+  },
+  "bugs": {
+    "url": "https://github.com/issueloom/issueloom/issues"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.26.0",
