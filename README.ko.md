@@ -22,6 +22,15 @@ AI 에이전트 팀의 이슈를 구조화하여 추적·관리하는 경량 이
 npm install -g issueloom
 ```
 
+## 호환성
+
+IssueLoom은 [Model Context Protocol](https://modelcontextprotocol.io/) 표준을 따르는 MCP 서버입니다. LLM 종류와 관계없이 MCP를 지원하는 모든 클라이언트에서 사용할 수 있습니다.
+
+**테스트 완료:**
+- Claude Code (에이전트 팀 워크플로우)
+
+**MCP를 지원하는 모든 클라이언트에서 사용 가능**하며, Cursor, Windsurf, Continue.dev, VS Code (Copilot) 등을 포함합니다. MCP 서버 등록 방법은 클라이언트마다 다르므로 각 클라이언트의 문서를 참고해주세요.
+
 ## 빠른 시작
 
 ### 1. 데이터베이스 초기화
@@ -30,13 +39,23 @@ npm install -g issueloom
 issueloom init --db ./tracker/issues.db
 ```
 
-### 2. MCP 서버 등록 (Claude Code)
+### 2. MCP 서버 등록
+
+**Claude Code:**
 
 ```bash
 claude mcp add issueloom -- npx issueloom --db ./tracker/issues.db
 ```
 
-이후 Claude Code 에이전트가 이슈 트래커 도구를 자동으로 사용할 수 있습니다.
+**기타 MCP 클라이언트:**
+
+MCP 서버는 아래 명령으로 실행할 수 있습니다:
+
+```bash
+npx issueloom --db ./tracker/issues.db
+```
+
+이 명령을 각 클라이언트의 MCP 서버 등록 방식에 맞게 설정해주세요.
 
 ### 3. 웹 뷰어 실행
 

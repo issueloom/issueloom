@@ -22,6 +22,15 @@ Lightweight issue tracking system for AI agent teams. Delivered as an [MCP](http
 npm install -g issueloom
 ```
 
+## Compatibility
+
+IssueLoom is an MCP server that follows the [Model Context Protocol](https://modelcontextprotocol.io/) standard. It works with any MCP-compatible client, regardless of the underlying LLM.
+
+**Tested with:**
+- Claude Code (agent team workflows)
+
+**Should work with any MCP-compatible client**, including Cursor, Windsurf, Continue.dev, VS Code (Copilot), and others. The MCP server registration method varies by client — refer to your client's documentation for setup.
+
 ## Quick Start
 
 ### 1. Initialize the database
@@ -30,13 +39,23 @@ npm install -g issueloom
 issueloom init --db ./tracker/issues.db
 ```
 
-### 2. Register the MCP server (Claude Code)
+### 2. Register the MCP server
+
+**Claude Code:**
 
 ```bash
 claude mcp add issueloom -- npx issueloom --db ./tracker/issues.db
 ```
 
-Your Claude Code agents can now use the issue tracker tools automatically.
+**Other MCP clients:**
+
+The MCP server can be started with:
+
+```bash
+npx issueloom --db ./tracker/issues.db
+```
+
+Refer to your client's documentation on how to register an MCP server using this command.
 
 ### 3. Launch the web viewer
 
